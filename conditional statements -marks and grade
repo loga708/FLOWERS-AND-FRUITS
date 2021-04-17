@@ -1,0 +1,29 @@
+#include<stdio.h>
+main()
+{
+    float marks ;
+    //getting the marks from the user
+    printf("Enter marks");
+    scanf("%f",&marks);
+    //checking for grades
+    if(marks>=85 && marks<=100)
+    {
+        printf("Excellent! You have secured GRADE A");
+    }
+    else if(marks>=70 && marks<85)
+    {
+        printf("Very good work! You have secured GRADE B");
+    }
+    else if(marks>=55 && marks<70)
+    {
+        printf("Good! You have secured GRADE C");
+    }
+    else if(marks>=40 && marks<55)
+    {
+        printf("Needs Improvement! You have secured GRADE D");
+    }
+    else
+    {
+        printf("Better Luck Next Time! You have secured GRADE F ");
+    }
+}
