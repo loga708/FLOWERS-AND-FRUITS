@@ -1,0 +1,26 @@
+#include<stdio.h>
+int lcm(int,int);
+int main()
+{
+    int num1,num2,test;
+    int prime[100];
+    printf("Input first number");
+    scanf("%d",&num1);
+    printf("Input second number");
+    scanf("%d",&num2);
+    test=lcm(num1,num2);
+    printf("The LCM of %d and %d is %d\n",num1,num2,test);
+    return 0;
+}
+int lcm(int num1,int num2)
+{
+    static int com =1;
+
+    if(com%num1==0 && com%num2==0)
+    {
+        return com;
+    }
+    com++;
+    lcm(num1,num2);
+    return com;
+}
